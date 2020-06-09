@@ -9,45 +9,8 @@ i18n
       fallbackLng: 'en',  // для указания резервного языка
       debug: true,  // покажет отсутствующий ключ перевода в консоли
       lng: 'en', // используемый язык
-      resources: {
-        en: {
-          translation: {
-              page:{
-              "teamPage": "This is a Team page",
-              "homePage": "This is a Home page",
-              "aboutPage": "This is a About page"
-              },
-            button: {
-              "englishBtn": "English",
-              "russianBtn": "Russian"
-            },
-            navMenu: {
-              "navHome": "Home",
-              "navTeam": "Team",
-              "navAbout": "About"
-            }
-          }
-        },
-        ru: {
-          translation: {
-            page: {
-            "teamPage": "Это страница команды",
-            "homePage": "Это домашняя страница",
-            "aboutPage": "Это страница для справки"
-            },
-            button: {
-              "englishBtn": "Английский",
-              "russianBtn": "Русский"
-            },
-            navMenu: {
-              "navHome": "Домой",
-              "navTeam": "Команда",
-              "navAbout": "Справка"
-            }
-          }
-        }
-      }
-    })
+      resources: {}})
+
 
 export default i18n;
 

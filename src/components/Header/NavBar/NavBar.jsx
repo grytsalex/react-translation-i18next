@@ -20,6 +20,9 @@ export const NavBar = memo(()=> {
         <div className="link">
           <Link to="/team">{t('Team')}</Link>
         </ div>
+        <div className="link">
+            <Link to="/hoc">{t('Higher Order Component')}</Link>
+        </ div>
     </nav>
   )
 }

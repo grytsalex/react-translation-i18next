@@ -4,11 +4,11 @@ import {useTranslation} from "react-i18next";
 
 export const Home = memo( (props)=> {
 
-  const { t , i18n } = useTranslation()
+  const { t } = useTranslation()
 
     return (
       <div className="home">
-        <h2>This is <i><u>Home</u></i> page</h2>
+        <h2>{t('This is Home page')}</h2>
       </div>
     )
   }
