@@ -15,7 +15,7 @@ export const NavBar = memo(()=> {
           <Link to="/">{t('Home')}</Link>
         </div>
         <div className="link">
-          <Link to="/about">{t('About')}</Link>
+          <Link to="/about">{t('React Select')}</Link>
         </div>
         <div className="link">
           <Link to="/team">{t('Team')}</Link>

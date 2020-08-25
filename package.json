@@ -16,8 +16,10 @@
     "@babel/preset-env": "^7.9.6",
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.1.0",
+    "chroma-js": "^2.1.0",
     "connected-react-router": "^6.8.0",
     "css-loader": "^1.0.0",
+    "html-webpack-plugin": "^4.3.0",
     "i18next-browser-languagedetector": "^4.1.1",
     "less-loader": "^6.1.0",
     "react-redux": "^7.2.0",
@@ -34,6 +36,7 @@
     "react-hot-loader": "^4.12.21",
     "react-i18next": "^11.4.0",
     "react-router": "^5.2.0",
+    "react-select": "^3.1.0",
     "redux": "^4.0.5"
   }
 }

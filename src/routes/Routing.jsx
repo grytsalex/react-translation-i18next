@@ -4,9 +4,9 @@ import { BrowserRouter as Router,
   Route
 } from "react-router-dom";
 import { Team } from "../components/Team/Team";
-import { About } from "../components/About/About";
+import { ReactSelect } from "../components";
 import { Home } from "../components/Home/Home";
-import {Header} from "../components/Header/Header";
+import { Header } from "../components/Header/Header";
 import ParentComponent from "../components/HigherOrderComponent/ParentComponent";
 
 export default class Layout extends Component {
@@ -16,10 +16,10 @@ export default class Layout extends Component {
       <Router>
         <Header/>
           <Switch>
-            <Route exact path="/" component={Home}/>
-            <Route path="/about" component={About}/>
-            <Route path="/team" component={Team}/>
-            <Route path="/hoc" component={ParentComponent}/>
+            <Route exact path="/" component={ Home }/>
+            <Route path="/about" component={ ReactSelect }/>
+            <Route path="/team" component={ Team }/>
+            <Route path="/hoc" component={ ParentComponent }/>
           </Switch>
       </Router>
     )
