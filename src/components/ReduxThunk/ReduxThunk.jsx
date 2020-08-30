@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef } from "react";
 import "./styles.less";
 import { useTranslation } from "react-i18next";
 

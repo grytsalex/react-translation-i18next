@@ -12,8 +12,8 @@ export default class Layout extends Component {
         <Header />
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route path="/about" component={ReactSelect} />
-          <Route path="/team" component={ReduxThunk} />
+          <Route path="/react-select" component={ReactSelect} />
+          <Route path="/redux-thunk" component={ReduxThunk} />
           <Route path="/hoc" component={ParentComponent} />
         </Switch>
       </Router>
