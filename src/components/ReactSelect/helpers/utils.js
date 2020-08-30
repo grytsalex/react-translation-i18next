@@ -1,5 +1,3 @@
-// import chroma from 'chroma-js';
-
 const brandColor = 'green';
 
 export const customStyles = {
@@ -9,10 +7,5 @@ export const customStyles = {
     borderColor: state.isFocused
       ? brandColor
       : 'red'
-//     '&:hover': {
-//       borderColor: state.isFocused
-//         ? brandColor
-//         : base.borderColor,
-//     }
   })
 };
