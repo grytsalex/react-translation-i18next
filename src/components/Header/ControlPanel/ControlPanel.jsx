@@ -1,8 +1,8 @@
-import React, { memo } from 'react';
+import React from 'react';
 import './styles.less';
 import { useTranslation } from "react-i18next";
 
-export const ControlPanel = memo(()=> {
+export const ControlPanel = () => {
 
   const { t, i18n } = useTranslation();
 
@@ -12,9 +12,8 @@ export const ControlPanel = memo(()=> {
 
     return (
       <div className="control-panel">
-          <button onClick={() => setLanguage('en')}>{t('englishBtn')}</button>
-          <button onClick={() => setLanguage('ru')}>{t('russianBtn')}</button>
+          <button className='englishBtn' onClick={() => setLanguage('en')}>{t('English')}</button>
+          <button className='russianBtn' onClick={() => setLanguage('ru')}>{t('Russian')}</button>
       </div>
     )
-  }
-)
+}

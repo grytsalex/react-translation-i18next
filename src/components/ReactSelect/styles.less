@@ -15,6 +15,7 @@ h2 {
 .select-container {
   width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 300px;
@@ -37,14 +38,15 @@ h2 {
 }
 
 .css-4ljt47-MenuList::-webkit-scrollbar {
-  width: 4px;
-  height: 0px;
+  width: 10px;
+  height: 100%;
 }
 .css-4ljt47-MenuList::-webkit-scrollbar-track {
   background: #f1f1f1;
 }
-.css-4ljt47-MenuList::-webkit-scrollbar-thumb {
+.css-4ljt47-MenuList::-webkit-scrollbar-thumb:vertical {
   background: #888;
+  height: 10px;
 }
 .css-4ljt47-MenuList::-webkit-scrollbar-thumb:hover {
   background: #555;

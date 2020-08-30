@@ -2,7 +2,7 @@ import React, { memo } from 'react';
 import './styles.less';
 import {useTranslation} from "react-i18next";
 import Select from 'react-select'
-import { colourStyles } from './utils';
+import { customStyles, checkCondition } from './utils';
 
 const options = [
   { value: 'chocolate', label: 'Chocolate' },
@@ -32,12 +32,19 @@ export const ReactSelect = memo( (props)=> {
             <div className="my-select"> 
               <Select
                options={ options }
-               closeMenuOnSelect={ false }
-               styles={ colourStyles }
-               closeMenuOnScroll={false}
-               menuIsOpen={true}
-               clearValue={()=>{}}
-              //  onChange={()=> }
+               styles={ customStyles }
+              //  closeMenuOnSelect={ false }
+              //  closeMenuOnScroll={false}
+              //  menuIsOpen={true}
+            //   styles={{
+            //     control: (base, state) => ({
+            //         ...base,
+                    // '&:hover': { borderColor: 'red' }, // border style on hover
+            //         '&:focus': { borderColor: 'green' },
+                    // border: '1px', // default border color
+            //         boxShadow: 'none', // no box-shadow
+            //     }),
+            // }}
                />
             </div>
           </div>

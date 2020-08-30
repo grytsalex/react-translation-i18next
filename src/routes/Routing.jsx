@@ -3,8 +3,7 @@ import { BrowserRouter as Router,
   Switch,
   Route
 } from "react-router-dom";
-import { Team } from "../components/Team/Team";
-import { ReactSelect } from "../components";
+import { ReactSelect, ReduxThunk } from "../components";
 import { Home } from "../components/Home/Home";
 import { Header } from "../components/Header/Header";
 import ParentComponent from "../components/HigherOrderComponent/ParentComponent";
@@ -18,7 +17,7 @@ export default class Layout extends Component {
           <Switch>
             <Route exact path="/" component={ Home }/>
             <Route path="/about" component={ ReactSelect }/>
-            <Route path="/team" component={ Team }/>
+            <Route path="/team" component={ ReduxThunk }/>
             <Route path="/hoc" component={ ParentComponent }/>
           </Switch>
       </Router>

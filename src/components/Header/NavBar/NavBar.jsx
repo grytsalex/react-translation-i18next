@@ -15,10 +15,10 @@ export const NavBar = memo(()=> {
           <Link to="/">{t('Home')}</Link>
         </div>
         <div className="link">
-          <Link to="/about">{t('React Select')}</Link>
+          <Link to="/react-select">{t('React Select')}</Link>
         </div>
         <div className="link">
-          <Link to="/team">{t('Team')}</Link>
+          <Link to="/redux-thunk">{t('Redux Thunk')}</Link>
         </ div>
         <div className="link">
             <Link to="/hoc">{t('Higher Order Component')}</Link>
