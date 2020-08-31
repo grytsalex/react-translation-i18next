@@ -33,18 +33,6 @@ export const ReactSelect = memo((props) => {
             <Select
               options={options}
               styles={customStyles}
-              //  closeMenuOnSelect={ false }
-              //  closeMenuOnScroll={false}
-              //  menuIsOpen={true}
-              //   styles={{
-              //     control: (base, state) => ({
-              //         ...base,
-              // '&:hover': { borderColor: 'red' },
-              //         '&:focus': { borderColor: 'green' },
-              // border: '1px', // default border color
-              //         boxShadow: 'none', // no box-shadow
-              //     }),
-              // }}
             />
           </div>
         </div>

@@ -1,0 +1,20 @@
+{
+    "ru": {
+      "translation": {
+        "page": {
+          "teamPage": "Редакс",
+          "homePage": "Домашняя",
+          "aboutPage": "Реакт селект"
+        },
+        "button": {
+          "englishBtn": "Английский",
+          "russianBtn": "Русский"
+        },
+        "navMenu": {
+          "navHome": "Домой",
+          "navTeam": "Редакс",
+          "navAbout": "Реакт селект"
+        }
+      }
+    }
+  }

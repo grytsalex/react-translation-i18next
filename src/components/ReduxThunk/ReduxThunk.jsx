@@ -5,6 +5,8 @@ import { useTranslation } from "react-i18next";
 export const ReduxThunk = (props) => {
   const { t } = useTranslation();
 
+console.log("HERE MY PROPS", props)
+
   const statusRef = useRef(null);
 
   return (

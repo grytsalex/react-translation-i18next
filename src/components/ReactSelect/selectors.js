@@ -1,0 +1,1 @@
+export const getIsFocused = (state) => state.reactSelect.isFocused;
