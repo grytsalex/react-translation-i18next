@@ -7,7 +7,7 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  setStatuData: (payload) => dispatch(actions.setStatuData(payload)),
+  setStatusData: (payload) => dispatch(actions.setStatusData(payload)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ReduxThunk);
