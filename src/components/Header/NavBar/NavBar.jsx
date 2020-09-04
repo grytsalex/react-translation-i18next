@@ -11,12 +11,15 @@ export const NavBar = memo(() => {
       <div className="link">
         <Link to="/">{t('navHome')}</Link>
       </div>
+      <div className="delimiter"/>
       <div className="link">
         <Link to="/react-select">{t('navSelect')}</Link>
       </div>
+      <div className="delimiter"/>
       <div className="link">
         <Link to="/redux-thunk">{t('navRedux')}</Link>
       </div>
+      <div className="delimiter"/>
       <div className="link">
         <Link to="/hoc">{t('navHoc')}</Link>
       </div>

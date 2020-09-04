@@ -9,7 +9,7 @@ export const ReactSelect = memo(() => {
 
   return (
     <div className="about">
-      <h2>{t('navSelect')}</h2>
+      <h2 className="heading">{t('navSelect')}</h2>
       <div className="select-container">
         <div className="form">
           <div className="my-select">

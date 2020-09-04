@@ -22,6 +22,7 @@
     "import/no-cycle": "warn",
     "no-bitwise": "warn",
     "react/state-in-constructor": [0],
+    "react/jsx-tag-spacing": [0],
     "import/prefer-default-export": "off",
     "object-curly-spacing" : [1, "always"],
     "jsx-a11y/label-has-for": ["error", {

@@ -3,7 +3,7 @@
         "englishBtn": "English",
         "russianBtn": "Russian",
         "navHome": "Home",
-        "navRedux": "Team",
-        "navSelect": "React Select",
+        "navRedux": "React-Redux-Thunk",
+        "navSelect": "React-Select",
         "navHoc": "Higher Order Component"
 }
