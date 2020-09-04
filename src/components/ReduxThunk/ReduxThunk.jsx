@@ -1,12 +1,12 @@
-import React, { useRef } from "react";
-import "./styles.less";
-import { useTranslation } from "react-i18next";
+import React, { useRef } from 'react';
+import './styles.less';
+import PropTypes from 'prop-types';
 
-export const ReduxThunk = (props) => {
-  const { t } = useTranslation();
+const propTypes = {
+  data: PropTypes.array.isRequired,
+};
 
-console.log("HERE MY PROPS", props)
-
+export const ReduxThunk = ({ data }) => {
   const statusRef = useRef(null);
 
   return (
@@ -14,11 +14,11 @@ console.log("HERE MY PROPS", props)
       <div
         className="status"
         style={{
-          width: "100%",
-          height: "100px",
-          justifyContent: "center",
-          display: "flex",
-          alignItems: "center",
+          width: '100%',
+          height: '100px',
+          justifyContent: 'center',
+          display: 'flex',
+          alignItems: 'center',
         }}
       >
         <p ref={statusRef}>Text</p>
@@ -26,3 +26,5 @@ console.log("HERE MY PROPS", props)
     </div>
   );
 };
+
+ReduxThunk.propTypes = propTypes;

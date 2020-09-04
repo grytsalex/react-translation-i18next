@@ -1,6 +1,6 @@
-import React from "react";
-import "./styles.less";
-import { useTranslation } from "react-i18next";
+import React from 'react';
+import './styles.less';
+import { useTranslation } from 'react-i18next';
 
 export const ControlPanel = () => {
   const { t, i18n } = useTranslation();
@@ -11,11 +11,11 @@ export const ControlPanel = () => {
 
   return (
     <div className="control-panel">
-      <button className="englishBtn" onClick={() => setLanguage("en")}>
-        {t("English")}
+      <button type="button" className="englishBtn" onClick={() => setLanguage('en')}>
+        {t('English')}
       </button>
-      <button className="russianBtn" onClick={() => setLanguage("ru")}>
-        {t("Russian")}
+      <button type="button" className="russianBtn" onClick={() => setLanguage('ru')}>
+        {t('Russian')}
       </button>
     </div>
   );

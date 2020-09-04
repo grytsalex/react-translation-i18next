@@ -1,10 +1,10 @@
-import actionTypes from "./constants/actionTypes.js";
+import actionTypes from './constants/actionTypes';
 
 const initialState = {
   data: [
-    { status: "Canceled" },
-    { status: "Completed" },
-    { status: "Expired" },
+    { status: 'Canceled' },
+    { status: 'Completed' },
+    { status: 'Expired' },
   ],
 };
 

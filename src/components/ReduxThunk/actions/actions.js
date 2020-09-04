@@ -1,4 +1,4 @@
-import actionTypes from "../constants/actionTypes.js";
+import actionTypes from '../constants/actionTypes';
 
 export const setStatusData = (payload) => ({
   type: actionTypes.CHANGE_DATA,

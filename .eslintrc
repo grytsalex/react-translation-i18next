@@ -1,0 +1,25 @@
+{
+  "extends": ["airbnb", "airbnb/hooks"],
+  "rules": {
+    "react/forbid-prop-types": [ "off", { "forbid": ["any"], "checkContextTypes": true, "checkChildContextTypes": true }],
+    "func-names": ["error", "never"],
+    "no-console": ["error", { "allow": ["error"] }],
+    "redux-saga/no-unhandled-errors": "warn",
+    "import/no-extraneous-dependencies": "warn",
+    "import/no-cycle": "warn",
+    "no-bitwise": "warn",
+    "import/prefer-default-export": "off",
+    "object-curly-spacing" : [1, "always"],
+    "jsx-a11y/label-has-for": ["error", {
+      "components": [ "label" ],
+      "required": {
+        "every": [ "nesting", "id" ]
+      },
+      "allowChildren": true
+    }],
+    "react/jsx-props-no-spreading": ["warn", { "html": "ignore", "exceptions": ["Component"] }]
+  },
+  "plugins": [
+    "redux-saga"
+  ]
+}

@@ -1,6 +1,6 @@
-import React, { Component } from "react";
-import "./styles.less";
-import Counter from "./Counter";
+import React, { Component } from 'react';
+import './styles.less';
+import Counter from './Counter';
 
 class ParentComponent extends Component {
   state = {
