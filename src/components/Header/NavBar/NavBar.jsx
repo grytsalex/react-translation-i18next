@@ -4,7 +4,7 @@ import './styles.less';
 import { useTranslation } from 'react-i18next';
 
 export const NavBar = memo(() => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   return (
     <nav className="navbar">

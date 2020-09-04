@@ -4,6 +4,7 @@
     "react/forbid-prop-types": [ "off", { "forbid": ["any"], "checkContextTypes": true, "checkChildContextTypes": true }],
     "func-names": ["error", "never"],
     "no-console": ["error", { "allow": ["error"] }],
+    "no-unused-vars": ["warn", { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }],
     "redux-saga/no-unhandled-errors": "warn",
     "import/no-extraneous-dependencies": "warn",
     "import/no-cycle": "warn",
