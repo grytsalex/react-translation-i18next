@@ -9,16 +9,16 @@ export const NavBar = memo(() => {
   return (
     <nav className="navbar">
       <div className="link">
-        <Link to="/">{t('Home')}</Link>
+        <Link to="/">{t('navHome')}</Link>
       </div>
       <div className="link">
-        <Link to="/react-select">{t('React Select')}</Link>
+        <Link to="/react-select">{t('navSelect')}</Link>
       </div>
       <div className="link">
-        <Link to="/redux-thunk">{t('Redux Thunk')}</Link>
+        <Link to="/redux-thunk">{t('navRedux')}</Link>
       </div>
       <div className="link">
-        <Link to="/hoc">{t('Higher Order Component')}</Link>
+        <Link to="/hoc">{t('navHoc')}</Link>
       </div>
     </nav>
   );

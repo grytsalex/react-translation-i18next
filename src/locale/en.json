@@ -1,20 +1,9 @@
 {
-  "en": {
-    "translation": {
-      "page": {
-        "teamPage": "This is a Team page",
         "homePage": "This is a Home page",
-        "aboutPage": "This is a About page"
-      },
-      "button": {
         "englishBtn": "English",
-        "russianBtn": "Russian"
-      },
-      "navMenu": {
+        "russianBtn": "Russian",
         "navHome": "Home",
-        "navTeam": "Team",
-        "navAbout": "About"
-      }
-    }
-  }
+        "navRedux": "Team",
+        "navSelect": "React Select",
+        "navHoc": "Higher Order Component"
 }

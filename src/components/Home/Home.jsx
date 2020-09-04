@@ -7,7 +7,7 @@ export const Home = memo(() => {
 
   return (
     <div className="home">
-      <h2>{t('This is Home page')}</h2>
+      <h2>{t('homePage')}</h2>
     </div>
   );
 });

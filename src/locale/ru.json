@@ -1,20 +1,9 @@
 {
-    "ru": {
-      "translation": {
-        "page": {
-          "teamPage": "Редакс",
-          "homePage": "Домашняя",
-          "aboutPage": "Реакт селект"
-        },
-        "button": {
-          "englishBtn": "Английский",
-          "russianBtn": "Русский"
-        },
-        "navMenu": {
-          "navHome": "Домой",
-          "navTeam": "Редакс",
-          "navAbout": "Реакт селект"
-        }
-      }
-    }
-  }
+      "homePage": "Домашняя",
+      "englishBtn": "Английский",
+      "russianBtn": "Русский",
+      "navHome": "Домой",
+      "navRedux": "Редакс",
+      "navSelect": "Реакт селект",
+      "navHoc": "Компонент высшего порядка"
+}
