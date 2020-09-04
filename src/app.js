@@ -17,12 +17,10 @@ const store = createStore(
 );
 
 ReactDOM.render(
-  // eslint-disable-next-line react/jsx-filename-extension
   <Provider store={store}>
     <I18nextProvider i18n={i18next}>
       <Routing />
     </I18nextProvider>
   </Provider>,
-  // eslint-disable-next-line no-undef
   document.getElementById('root'),
 );

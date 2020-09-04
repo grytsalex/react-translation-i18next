@@ -1,14 +1,27 @@
 {
   "extends": ["airbnb", "airbnb/hooks"],
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true,
+      "modules": true,
+      "experimentalObjectRestSpread": true
+    }
+  },
   "rules": {
+    "react/prefer-stateless-function": [0, { "ignorePureComponents": true }],
     "react/forbid-prop-types": [ "off", { "forbid": ["any"], "checkContextTypes": true, "checkChildContextTypes": true }],
     "func-names": ["error", "never"],
     "no-console": ["error", { "allow": ["error"] }],
     "no-unused-vars": ["warn", { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }],
     "redux-saga/no-unhandled-errors": "warn",
     "import/no-extraneous-dependencies": "warn",
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     "import/no-cycle": "warn",
     "no-bitwise": "warn",
+    "react/state-in-constructor": [0],
     "import/prefer-default-export": "off",
     "object-curly-spacing" : [1, "always"],
     "jsx-a11y/label-has-for": ["error", {
@@ -21,6 +34,11 @@
     "react/jsx-props-no-spreading": ["warn", { "html": "ignore", "exceptions": ["Component"] }]
   },
   "plugins": [
-    "redux-saga"
-  ]
+    "redux-saga",
+    "react"
+  ],
+  "env": {
+    "browser": true,
+    "node": true
+  }
 }
