@@ -5,5 +5,9 @@
         "navHome": "Home",
         "navRedux": "React-Redux-Thunk",
         "navSelect": "React-Select",
-        "navHoc": "Higher Order Component"
+        "navHoc": "Higher Order Component",
+        "userId": "userId:",
+        "id": "id: ",
+        "title": "title: ",
+        "completed": "completed: "
 }
