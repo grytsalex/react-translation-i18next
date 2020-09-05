@@ -3,13 +3,14 @@ import './styles.less';
 import { useTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
 import * as _ from 'lodash';
-import { getSomeData } from './helpers/utils';
+import { getSomeData, fetchSecretSauce } from './helpers/utils';
+import * as actions from './actions/actions.js'
 
 const propTypes = {
-  data: PropTypes.array.isRequired,
+  users: PropTypes.object.isRequired,
 };
 
-export const ReduxThunk = ({ data }) => {
+export const ReduxThunk = ({ users }) => {
   const { t } = useTranslation();
   const statusRef = useRef(null);
   const [list, setList] = useState({});
@@ -17,6 +18,25 @@ export const ReduxThunk = ({ data }) => {
   getSomeData.then((response) => setList(response));
   const arrayList = _.values(list);
   const headesForList = ['userId', 'id', 'title', 'completed'];
+
+
+console.log(store)
+
+
+  function makeASandwichWithSecretSauce(forPerson) {
+    return function(dispatch) {
+      return fetchSecretSauce().then(
+        (sauce) => dispatch(makeASandwich(forPerson, sauce)),
+        (error) => dispatch(apologize('The Sandwich Shop', forPerson, error)),
+      );
+    };
+  }
+
+store.dispatch(makeASandwichWithSecretSauce('Me'));
+
+store.dispatch(makeASandwichWithSecretSauce('My partner')).then(() => {
+    console.log('Done!');
+  });
 
   return (
     <div className="team">
@@ -42,15 +62,13 @@ export const ReduxThunk = ({ data }) => {
           <p ref={statusRef}>...Text</p>
           <hr style={{ width: '200px', textAlign: 'center' }}/>
         </div>
-        <div>
-          <table style={{ border: '1px solid orange' }}>
-            <td style={{ borderRight: '1px solid orange' }}>
-              {headesForList.map((item) => <tr><p>{t(`${item}`)}</p></tr>)}
-            </td>
-            <td>
-              {arrayList.map((item) => <tr><p>{item.toString()}</p></tr>)}
-            </td>
-          </table>
+        <div style={{ display: 'flex', justifyContent: 'center' }}>
+          <div style={{ borderRight: '1px solid orange', paddingRight: '10px', boxSizing: 'border-box' }}>
+            {headesForList.map((item, index) => <p key={index}>{t(`${item}`)}</p>)}
+          </div>
+          <div style={{ paddingLeft: '10px' }}>
+            {arrayList.map((item, index) => <p key={index}>{item.toString()}</p>)}
+          </div>
         </div>
       </div>
     </div>

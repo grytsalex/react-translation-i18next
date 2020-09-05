@@ -1,17 +1,13 @@
 import actionTypes from './constants/actionTypes';
 
 const initialState = {
-  data: [
-    { status: 'Canceled' },
-    { status: 'Completed' },
-    { status: 'Expired' },
-  ],
+  users: {},
 };
 
 export default function reduxThunkReducer(state = initialState, action) {
   switch (action.type) {
-    case actionTypes.CHANGE_DATA:
-      return { ...state, data: action.payload };
+    case actionTypes.SET_USERS_DATA:
+      return { ...state, users: action.payload };
     default:
       return state;
   }

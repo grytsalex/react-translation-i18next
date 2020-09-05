@@ -1,1 +1,1 @@
-export const getData = (state) => state.reduxThunk.data;
+export const getUsers = (state) => state.reduxThunk.users;

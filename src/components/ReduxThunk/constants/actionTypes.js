@@ -1,5 +1,5 @@
 import keyMirror from 'key-mirror';
 
 export default keyMirror({
-  CHANGE_DATA: null,
+  SET_USERS_DATA: null,
 });
