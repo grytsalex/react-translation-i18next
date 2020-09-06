@@ -3,7 +3,7 @@ import './styles.less';
 import { useTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
 import * as _ from 'lodash';
-import { getSomeData, fetchForThunk } from './helpers/utils';
+import { getSomeData } from './helpers/utils';
 
 const propTypes = {
   users: PropTypes.array.isRequired,

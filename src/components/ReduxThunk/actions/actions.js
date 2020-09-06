@@ -17,8 +17,8 @@ const fetchUsersDataFailure = error => ({
 
 export const thunkAsyncDataFetch = () => function (dispatch) {
   dispatch(fetchUsersData());
-  fetchForThunk().then(response => {
-    const users = response.data.map(user => user.id);
+  fetchForThunk().then(data => {
+    const users = data.map(user => user.id);
     dispatch(setUsersData(users));
   })
     .catch(error => {
