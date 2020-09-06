@@ -19,8 +19,6 @@ export const ReduxThunk = ({ users, thunkAsyncDataFetch }) => {
   const arrayList = _.values(list);
   const headesForList = ['userId', 'id', 'title', 'completed'];
 
-  console.log(users);
-
   return (
     <div className="team">
       <div
@@ -34,6 +32,16 @@ export const ReduxThunk = ({ users, thunkAsyncDataFetch }) => {
           flexDirection: 'column',
         }}
       >
+        <div className="mylist">
+          <div className="fortitle">
+            <span>{t('userId')}</span>
+          </div>
+          <div className="list-group" style={{ paddingBottom: '20px' }}>
+            <ul className="list-group list-group-horizontal">
+              {users.map((user, index) => <li key={index} className="list-group-item">{user}</li>)}
+            </ul>
+          </div>
+        </div>
         <div style={{ paddingBottom: '20px' }}>
           <button
             type="button"
