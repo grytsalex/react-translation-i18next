@@ -1,33 +1,27 @@
 import actionTypes from '../constants/actionTypes';
+import { fetchForThunk } from '../helpers/utils';
 
-// export const setUserData = (payload) => ({
-//   type: actionTypes.SET_USERS_DATA,
-//   payload,
-// });
+const setUsersData = users => ({
+  type: actionTypes.SET_USERS_DATA,
+  payload: users,
+});
 
-function makeASandwich(forPerson, secretSauce) {
-  return {
-    type: 'MAKE_SANDWICH',
-    forPerson,
-    secretSauce,
-  };
-}
+const fetchUsersData = () => ({
+  type: actionTypes.FETCH_USERS_DATA,
+});
 
-function apologize(fromPerson, toPerson, error) {
-  return {
-    type: 'APOLOGIZE',
-    fromPerson,
-    toPerson,
-    error,
-  };
-}
+const fetchUsersDataFailure = error => ({
+  type: actionTypes.FETCH_USERS_DATA_FAILURE,
+  payload: error,
+});
 
-function withdrawMoney(amount) {
-  return {
-    type: 'WITHDRAW',
-    amount,
-  };
-}
-
-
-store.dispatch(withdrawMoney(100));
+export const thunkAsyncDataFetch = () => function (dispatch) {
+  dispatch(fetchUsersData());
+  fetchForThunk().then(response => {
+    const users = response.data.map(user => user.id);
+    dispatch(setUsersData(users));
+  })
+    .catch(error => {
+      dispatch(fetchUsersDataFailure(error.message));
+    });
+};

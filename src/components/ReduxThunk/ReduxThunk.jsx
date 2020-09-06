@@ -3,14 +3,14 @@ import './styles.less';
 import { useTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
 import * as _ from 'lodash';
-import { getSomeData, fetchSecretSauce } from './helpers/utils';
-import * as actions from './actions/actions.js'
+import { getSomeData, fetchForThunk } from './helpers/utils';
 
 const propTypes = {
-  users: PropTypes.object.isRequired,
+  users: PropTypes.array.isRequired,
+  thunkAsyncDataFetch: PropTypes.func.isRequired,
 };
 
-export const ReduxThunk = ({ users }) => {
+export const ReduxThunk = ({ users, thunkAsyncDataFetch }) => {
   const { t } = useTranslation();
   const statusRef = useRef(null);
   const [list, setList] = useState({});
@@ -19,24 +19,7 @@ export const ReduxThunk = ({ users }) => {
   const arrayList = _.values(list);
   const headesForList = ['userId', 'id', 'title', 'completed'];
 
-
-console.log(store)
-
-
-  function makeASandwichWithSecretSauce(forPerson) {
-    return function(dispatch) {
-      return fetchSecretSauce().then(
-        (sauce) => dispatch(makeASandwich(forPerson, sauce)),
-        (error) => dispatch(apologize('The Sandwich Shop', forPerson, error)),
-      );
-    };
-  }
-
-store.dispatch(makeASandwichWithSecretSauce('Me'));
-
-store.dispatch(makeASandwichWithSecretSauce('My partner')).then(() => {
-    console.log('Done!');
-  });
+  console.log(users);
 
   return (
     <div className="team">
@@ -51,6 +34,15 @@ store.dispatch(makeASandwichWithSecretSauce('My partner')).then(() => {
           flexDirection: 'column',
         }}
       >
+        <div style={{ paddingBottom: '20px' }}>
+          <button
+            type="button"
+            className="btn btn-primary"
+            onClick={thunkAsyncDataFetch}
+          >
+            {t('getUsers')}
+          </button>
+        </div>
         <div
           style={{
             justifyContent: 'center',

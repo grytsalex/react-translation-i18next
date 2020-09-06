@@ -40,7 +40,8 @@
   "plugins": [
     "redux-saga",
     "react",
-    "babel"
+    "babel",
+    "html"
   ],
   "env": {
     "browser": true,

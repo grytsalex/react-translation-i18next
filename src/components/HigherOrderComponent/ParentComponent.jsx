@@ -11,7 +11,7 @@ class ParentComponent extends Component {
     const { count } = this.state;
 
     return (
-      <div className="container">
+      <div className="containerForPage">
         <Counter
           count={count}
           onCountUp={() => this.setState({ count: count + 1 })}

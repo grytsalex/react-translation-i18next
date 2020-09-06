@@ -9,5 +9,6 @@
         "userId": "userId",
         "id": "id",
         "title": "title",
-        "completed": "completed"
+        "completed": "completed",
+        "getUsers": "Get Users"
 }

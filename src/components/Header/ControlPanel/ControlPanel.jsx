@@ -11,10 +11,10 @@ export const ControlPanel = () => {
 
   return (
     <div className="control-panel">
-      <button type="button" className="englishBtn" onClick={() => setLanguage('en')}>
+      <button type="button" className="changeLang" onClick={() => setLanguage('en')}>
         {t('englishBtn')}
       </button>
-      <button type="button" className="russianBtn" onClick={() => setLanguage('ru')}>
+      <button type="button" className="changeLang" onClick={() => setLanguage('ru')}>
         {t('russianBtn')}
       </button>
     </div>
